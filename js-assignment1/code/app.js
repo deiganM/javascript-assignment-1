@@ -5,6 +5,7 @@ const greenblue = 'rgba(62,171, 201, 1)'
 const pink = 'rgba(254,156, 161, 1)'
 const blue = 'rgba(98,189, 254, 1)'
 
+
 const data = [
     {
         topic: 'Food',
@@ -44,9 +45,24 @@ const data = [
     }
 ]
 
+
 // Instructions
 // Take the data above and display it as tiles on the page
 
+const cardText = document.querySelector('#card-container')
 
+let html = ``
+for (i of data) {
+    html = html + `
+    <div class="cards" style="background-color:${i.color}">
+    <div class="text">
+        <h3>${i.topic}</h3>
+        <h4>${i.title}</h4>
+    </div>
+    <button>Read for ${i.price}</button>
+</div>
+    `  
+}
 
+cardText.innerHTML = html
 
