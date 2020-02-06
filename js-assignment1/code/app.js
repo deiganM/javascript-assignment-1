@@ -51,7 +51,7 @@ const data = [
 
 const cardText = document.querySelector('#card-container')
 
-let html = ``
+let html = ""
 for (i of data) {
     html = html + `
     <div class="cards" style="background-color:${i.color}">
